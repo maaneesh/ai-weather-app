@@ -24,30 +24,30 @@ function Search() {
   };
 
   return (
-    <>
+    <div className="form-control  space-x-2">
       <form
         id="search"
         onSubmit={handleSubmit}
-        className="flex flex-row items-center p-4 bg-gray-100 rounded-lg shadow-md space-y-4"
+        className="textarea items-center p-4 bg-gray-100 rounded-lg shadow-md space-y-4"
       >
-        <label className="text-lg font-semibold">
+        <div className="flex items-center gap-4">
           <input
             type="text"
             name="city"
             placeholder="Enter city name.."
             className="mt-4 p-2 border border-gray-300 rounded-md w-full"
           />
-        </label>
 
-        <button
-          type="submit"
-          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
-        >
-          Submit
-        </button>
+          <button
+            type="submit"
+            className="btn mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+          >
+            Search
+          </button>
+        </div>
       </form>
       <WeatherDisplay weather={weather} />
-    </>
+    </div>
   );
 }
 
