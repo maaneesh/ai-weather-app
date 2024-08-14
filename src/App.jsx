@@ -1,12 +1,13 @@
 import { useState } from "react";
-import "./App.css";
-
+import Search from "./components/search";
+import WeatherDisplay from "./components/weatherDisplay";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="text-3xl font-bold underline">
-      <h1>Manish Chaudhari</h1>
+    <div className="h-screen w-screen flex justify-center items-center">
+      <div className="text-center">
+        <h1>Weather</h1>
+        <Search />
+      </div>
     </div>
   );
 }
