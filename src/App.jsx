@@ -5,11 +5,13 @@ import WeatherDisplay from "./components/weatherDisplay";
 function App() {
   return (
     <div className="h-screen w-screen  flex justify-center items-center">
-      <div className="artboard phone-5 text-xl font-semibold text-center">
-        <div className="py-4">
-          <h1>Weather</h1>
+      <div className="min-w-90 bg-orange-200">
+        <div className="py-3.5 font-semibold text-center">
+          <div>
+            <h1 className="text-xl  text-stone-950 ">Current Weather</h1>
+          </div>
+          <Search />
         </div>
-        <Search />
       </div>
     </div>
   );

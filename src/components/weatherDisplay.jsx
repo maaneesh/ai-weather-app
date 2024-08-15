@@ -2,6 +2,8 @@ import React from "react";
 import Search from "./search";
 
 function WeatherDisplay({ weather }) {
+  console.log(weather);
+
   if (!weather) {
     return <p>No weather data available.</p>;
   }
@@ -11,9 +13,11 @@ function WeatherDisplay({ weather }) {
   let minTemp = Math.round(1.8 * (weather.main.temp_min - 273) + 32);
   let maxTemp = Math.round(1.8 * (weather.main.temp_max - 273) + 32);
   let humidity = weather.main.humidity;
+  let icon = weather.weather.icon;
+  console.log(typeof icon);
 
   return (
-    <div className="mt-4 text-xl font-semibold">
+    <div className="mt-4 text-xl text-stone-950 font-semibold">
       <div className="flex justify-center gap-2 ">
         <h2>Currently in </h2>
 
@@ -27,15 +31,15 @@ function WeatherDisplay({ weather }) {
         <p>Humidity: {humidity}%</p>
       </div>
       <div>
-        <p>Feels Like: {feelslike}F</p>
+        <p>Feels Like: {feelslike} F</p>
       </div>
 
       <div className="flex gap-2 justify-center">
-        <p>Min:{minTemp} F</p>
-        <p>Max:{maxTemp}F</p>
+        <p>Min: {minTemp} F</p>
+        <p>Max: {maxTemp} F</p>
       </div>
       <div>
-        <p>Condition: {weather.weather[0].description}</p>
+        <p>Description: {weather.weather[0].description}</p>
       </div>
     </div>
   );

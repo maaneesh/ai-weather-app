@@ -28,19 +28,19 @@ function Search() {
       <form
         id="search"
         onSubmit={handleSubmit}
-        className="textarea items-center p-4 bg-gray-100 rounded-lg shadow-md space-y-4"
+        className="py-0 bg-orange-200 px-1 rounded-lg "
       >
-        <div className="flex items-center gap-4">
+        <div className="flex items-center content-center  bg-orange-200 gap-4">
           <input
             type="text"
             name="city"
             placeholder="Enter city name.."
-            className="mt-4 p-2 border border-gray-300 rounded-md w-full"
+            className="mt-0 p-2 border bg-sky-300 w-full"
           />
 
           <button
             type="submit"
-            className="btn mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+            className="btn mt-0 px-4 py-2 bg-blue-400 text-white rounded-md hover:bg-blue-600"
           >
             Search
           </button>
