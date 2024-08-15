@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import WeatherDisplay from "./weatherDisplay";
 
+const API_KEY = import.meta.env.VITE_API_KEY;
+
 function Search() {
   const [weather, setWeather] = useState(null);
 
@@ -10,7 +12,7 @@ function Search() {
 
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ca83e9f1d7f479142e8f0f3e6bd8e16e`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
       );
       if (!response.ok) {
         throw new Error("Weather data could not be fetched.");
@@ -35,7 +37,7 @@ function Search() {
             type="text"
             name="city"
             placeholder="Enter city name.."
-            className="mt-0 p-2 border bg-sky-300 w-full"
+            className="mt-0 p-2 border text-slate-950 bg-sky-300 w-full"
           />
 
           <button
