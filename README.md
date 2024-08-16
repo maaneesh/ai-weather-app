@@ -1,5 +1,5 @@
-# Weathe App
+# Weather App
 
 ## Uses React, Tailwind CSS + DaisyUI
 
-## uses Open Weather API
+## Uses Open Weather API
