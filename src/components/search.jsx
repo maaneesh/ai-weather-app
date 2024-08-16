@@ -26,23 +26,23 @@ function Search() {
   };
 
   return (
-    <div className="form-control  space-x-2">
+    <div className="flex justify-center form-control   space-x-2  p-4  bg-caribbean text-black">
       <form
         id="search"
         onSubmit={handleSubmit}
-        className="py-0 bg-orange-200 px-1 rounded-lg "
+        className="py-0 bg-caribbean px-1 rounded-md "
       >
-        <div className="flex items-center content-center  bg-orange-200 gap-4">
+        <div className="flex items-center input input-bordered  bg-white rounded-full shadow-md content-center  gap-4">
           <input
             type="text"
             name="city"
             placeholder="Enter city name.."
-            className="mt-0 p-2 border text-slate-950 bg-sky-300 w-full"
+            className="mt-0 bg-transparent  p-2  w-full"
           />
 
           <button
             type="submit"
-            className="btn mt-0 px-4 py-2 bg-blue-400 text-white rounded-md hover:bg-blue-600"
+            className="btn mt-0 px-4 py-2 text-white rounded-md hover:bg-blue-600"
           >
             Search
           </button>
